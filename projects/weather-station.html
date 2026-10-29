@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8" />
+<title>Trạm quan trắc thời tiết IoT tích hợp AI — Nguyễn Hoàng Linh</title>
+<meta name="description" content="Dự án trạm quan trắc thời tiết sử dụng ATmega328P, ESP32 và Python, trọng tâm vào kiểm thử ngoại vi và phân tích kiến trúc hệ thống." />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="canonical" href="https://yourdomain.com/portfolio/projects/weather-station.html" />
+<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+<meta name="theme-color" content="#f4f2ed" />
+<meta name="author" content="Nguyễn Hoàng Linh" />
+<meta property="og:title" content="Trạm quan trắc thời tiết IoT tích hợp AI — Nguyễn Hoàng Linh" />
+<meta property="og:description" content="Dự án trạm quan trắc thời tiết sử dụng ATmega328P, ESP32 và Python, trọng tâm vào kiểm thử ngoại vi và phân tích kiến trúc hệ thống." />
+<meta property="og:type" content="website" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,300;6..72,400;6..72,500&family=Inter+Tight:wght@400;500;600&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+<a class="skip-link" href="#main">Chuyển đến nội dung</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="../index.html">
+      <strong>Nguyễn Hoàng Linh</strong>
+      <span>Kỹ thuật Điện tử - Tin học · ĐHQG Hà Nội</span>
+    </a>
+    <nav aria-label="Primary">
+      <ul class="nav-list" id="nav-list">
+        <li><a href="../index.html#experience">Kinh nghiệm</a></li>
+        <li><a href="../index.html#projects">Dự án</a></li>
+        <li><a href="../index.html#skills">Kỹ năng</a></li>
+        <li><a href="../about.html">Về tôi</a></li>
+        <li><a href="../index.html#contact">Liên hệ</a></li>
+        <li><a class="nav-cv" href="../assets/CV_Nguyen_Hoang_Linh.pdf">CV</a></li>
+      </ul>
+    </nav>
+    <button class="nav-toggle" aria-label="Mở menu điều hướng" aria-expanded="false" aria-controls="nav-list">
+      <span class="nav-toggle-bars"><span></span><span></span><span></span></span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+  <section class="page-hero">
+    <div class="wrap">
+      <a class="breadcrumb" href="../index.html#projects">&larr; Tất cả dự án</a>
+      <p class="label">Phân tích hệ thống &middot; Data Flow &middot; Kiểm thử phần cứng</p>
+      <h1>Trạm quan trắc thời tiết IoT tích hợp AI</h1>
+      <p class="dek">Hệ thống thu thập dữ liệu môi trường và dự báo thời tiết. Trọng tâm công việc: kiểm tra tín hiệu giao tiếp ngoại vi, thiết kế sơ đồ kiến trúc và tổng hợp báo cáo kỹ thuật.</p>
+    </div>
+  </section>
+
+<section class="section" style="border-top:none; padding-top:0;">
+    <div class="wrap two-col">
+      
+      <!-- CỘT TRÁI: VĂN BẢN VÀ SƠ ĐỒ -->
+      <div class="prose">
+        <p>Dự án hướng tới việc xây dựng một hệ thống hoàn chỉnh từ biên đến đám mây, thực hiện thu thập dữ liệu môi trường thời gian thực và áp dụng mô hình Học máy để đưa ra các dự báo thời tiết cục bộ.</p>
+        
+        <figure style="margin: 2rem 0;">
+          <img src="../assets/weather-station/weather.png" alt="Sơ đồ khối hệ thống" style="width: 100%; border-radius: 8px;">
+          <figcaption style="text-align: center; font-size: 0.85em; margin-top: 8px; color: #666; font-family: 'Inter Tight', sans-serif;">Sơ đồ kiến trúc tổng thể luồng dữ liệu của dự án</figcaption>
+        </figure>
+        
+        <p>
+          Trong quá trình thực hiện, tôi tập trung tìm hiểu cách các cảm biến
+          cung cấp dữ liệu cho vi điều khiển, cách tổ chức các thành phần
+          phần cứng và cách biểu diễn luồng dữ liệu giữa các khối chức năng.
+          Việc kiểm tra dữ liệu đầu ra từ cảm biến giúp phát hiện sớm những
+          vấn đề có thể phát sinh trước khi thực hiện các bước tích hợp tiếp theo.
+        </p>
+
+        <p>
+          Bên cạnh phần cứng, tôi tìm hiểu cách sử dụng công cụ phần mềm để
+          hỗ trợ xử lý dữ liệu và mô tả kiến trúc tổng thể. Qua đó, dự án giúp
+          tôi rèn luyện tư duy phân tích hệ thống, khả năng đọc hiểu luồng dữ
+          liệu và cách trình bày các thành phần kỹ thuật trong một hệ thống IoT.
+        </p>
+      </div>
+
+      <!-- CỘT PHẢI: BẢNG THÔNG SỐ VÀ ẢNH THỰC TẾ -->
+      <div>
+        <table class="spec-table">
+          <tbody>
+            <tr><th>Nền tảng</th><td>ATmega328P, ESP32</td></tr>
+            <tr><th>Cảm biến</th><td> Hall, Cảm biến mưa, DHT11</td></tr>
+            <tr><th>Phần mềm & AI</th><td>Python, Ridge Regression</td></tr>
+            <tr><th>Trọng tâm</th><td>Kiểm thử ngoại vi, Phân tích luồng dữ liệu</td></tr>
+            <tr><th>Tài liệu hóa</th><td>Sơ đồ khối hệ thống, Báo cáo kỹ thuật</td></tr>
+            <tr><th>Kết quả</th><td>Kiến trúc dữ liệu minh bạch, phần cứng tích hợp ổn định</td></tr>
+          </tbody>
+        </table>
+        
+        <figure style="margin:2.5rem 0 0;">
+          <img
+            src="../assets/weather-station/mohinh.png"
+            alt="Mô hình phần cứng trạm quan trắc thời tiết"
+            loading="lazy"
+            style="width:100%; border-radius:8px; border:1px solid var(--line);"
+          />
+          <figcaption style="text-align:center; font-size:0.85em; margin-top:10px; color:#666; font-family:'Inter Tight', sans-serif;">
+            Mô hình phần cứng của trạm quan trắc thời tiết
+          </figcaption>
+        </figure>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Chi tiết công việc</h2>
+        <span class="section-index">01 / THỰC THI</span>
+      </div>
+      <ol class="process-list">
+        <li><div><h4>Chạy thử nghiệm thiết bị</h4><p>Thiết lập và vận hành thử nghiệm độc lập từng module cảm biến để đánh giá dải đo, nhiễu tín hiệu và tính ổn định của thiết bị.</p></div></li>
+        <li><div><h4>Kiểm tra giao tiếp ngoại vi</h4><p>Xác thực các chuẩn giao tiếp (đặc biệt là I2C với cảm biến BME280), đảm bảo dữ liệu môi trường thô được đọc về vi điều khiển chính xác, không bị suy hao.</p></div></li>
+        <li><div><h4>Phân tích luồng dữ liệu</h4><p>Định tuyến cách dữ liệu di chuyển từ ATmega328P/ESP32 lên server và đi vào mô hình Python, đảm bảo không xảy ra tắc nghẽn luồng thông tin (bottlenecks).</p></div></li>
+        <li><div><h4>Thiết kế kiến trúc & Báo cáo</h4><p>Mô hình hóa toàn bộ hệ thống bằng sơ đồ khối trực quan, biên soạn báo cáo kỹ thuật chi tiết để nghiệm thu dự án và chuyển giao cho nhóm AI.</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section" id="disclosure">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Kỹ năng đạt được</h2>
+        <span class="section-index">02 / KẾT QUẢ TỔNG QUAN</span>
+      </div>
+
+      <div class="disclosure">
+        <div class="disclosure-col">
+          <p class="label">Phân tích Hệ thống</p>
+          <ul class="disclosure-list">
+            <li>Kỹ năng tư duy bao quát để nhìn nhận một hệ thống IoT dưới góc độ luồng dữ liệu thay vì chỉ là các linh kiện rời rạc.</li>
+            <li>Thành thạo việc sử dụng các công cụ vẽ sơ đồ chuyên ngành để mô hình hóa kiến trúc dự án đa lớp.</li>
+          </ul>
+        </div>
+
+        <div class="disclosure-col disclosure-held">
+          <p class="label">Kỹ năng mềm & Kỹ thuật</p>
+          <ul class="disclosure-list">
+            <li>Kỹ năng làm tài liệu hóa - yếu tố quan trọng khi làm việc nhóm (phần cứng giao tiếp với phần mềm).</li>
+            <li>Nắm bắt cách vận hành các cảm biến thông dụng và phương pháp xác thực dữ liệu ngoại vi trước khi tích hợp hệ thống lớn.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>&copy; <span data-year>2026</span> Nguyễn Hoàng Linh</span>
+    <span><a href="mailto:linhnguyennhl235@gmail.com" style="text-decoration:none;">Liên hệ &rarr;</a></span>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

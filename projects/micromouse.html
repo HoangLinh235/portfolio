@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8" />
+<title>Micro Mouse - Robot Giải Mã Mê Cung — Nguyễn Hoàng Linh</title>
+<meta name="description" content="Dự án Micro Mouse: Thiết kế robot tự động giải mã mê cung sử dụng vi điều khiển ATmega8, mạch PCB tự thiết kế và thuật toán bám tường phải." />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="canonical" href="https://hoanglinh235.github.io/portfolio/projects/micromouse.html" />
+<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png" />
+<meta name="theme-color" content="#f4f2ed" />
+<meta name="author" content="Nguyễn Hoàng Linh" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Nguyễn Hoàng Linh — Engineering Portfolio" />
+<meta property="og:title" content="Micro Mouse - Robot Giải Mã Mê Cung" />
+<meta property="og:description" content="Dự án Micro Mouse: Thiết kế robot tự động giải mã mê cung sử dụng vi điều khiển ATmega8 và thuật toán bám tường phải." />
+<meta property="og:url" content="https://hoanglinh235.github.io/portfolio/projects/micromouse.html" />
+<meta property="og:locale" content="vi_VN" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,300;6..72,400;6..72,500&family=Inter+Tight:wght@400;500;600&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../css/style.css?v=20261013c" />
+<script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script>
+<style>
+.gl h1 { margin: 6px 0 20px; font-size: clamp(2.1rem, 1.4rem + 3vw, 3.4rem); line-height: 1.04; letter-spacing: -0.025em; font-weight: 300; }
+.gl h2 { font-size: clamp(1.5rem, 1.2rem + 1.2vw, 2.1rem); line-height: 1.15; letter-spacing: -0.015em; font-weight: 300; }
+.gl h4 { font-size: 1.05rem; margin: 0 0 4px; font-weight: 600; }
+.gl .prose p, .gl .pd-lede { line-height: 1.65; }
+.gl .section-index { color: var(--ink); }
+.viewer { border: 1px solid var(--line); background: #f0eee6; }
+.viewer model-viewer { width: 100%; height: clamp(340px, 60vw, 560px); display: block; --poster-color: transparent; }
+.gl-facts { margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--line); font-size: 15px; line-height: 1.6; max-width: 56ch; }
+.gl-table { width: 100%; border-collapse: collapse; font-size: 15px; }
+.gl-table th, .gl-table td { text-align: left; padding: 10px 12px 10px 0; border-bottom: 1px solid var(--line); vertical-align: top; }
+.gl-table th { font: 500 11px/1.4 var(--font-mono); letter-spacing: .05em; text-transform: uppercase; color: var(--muted); }
+.gl-steps { counter-reset: s; list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 20px; }
+.gl-steps li { counter-increment: s; border-top: 2px solid var(--ink); padding-top: 10px; font-size: 15px; line-height: 1.5; }
+.gl-steps li::before { content: counter(s); display: block; font: 600 13px var(--font-mono); margin-bottom: 4px; }
+.gl video { width: 100%; height: auto; display: block; background: #f0eee6; }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Chuyển đến nội dung chính</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="../index.html">
+      <strong>Nguyễn Hoàng Linh</strong>
+      <span>Kỹ thuật Điện tử & Tin học · ĐHQG Hà Nội</span>
+    </a>
+    <nav aria-label="Primary">
+      <ul class="nav-list" id="nav-list">
+        <li><a href="../index.html#experience">Kinh nghiệm</a></li>
+        <li><a href="../index.html#projects">Dự án</a></li>
+        <li><a href="../index.html#skills">Kỹ năng</a></li>
+        <li><a href="../about.html">Về tôi</a></li>
+        <li><a href="../index.html#contact">Liên hệ</a></li>
+        <li><a class="nav-cv" href="../assets/CV_Nguyen_Hoang_Linh.pdf">CV</a></li>
+      </ul>
+    </nav>
+    <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-list">
+      <span class="nav-toggle-bars"><span></span><span></span><span></span></span>
+    </button>
+  </div>
+</header>
+
+<main id="main" class="gl">
+  <section class="page-hero">
+    <div class="wrap two-col">
+      
+      <!-- ================= CỘT TRÁI: VĂN BẢN ================= -->
+      <div>
+        <a class="breadcrumb" href="../index.html#projects">&larr; Trở về trang chủ</a>
+        <p class="label">Đồ án môn học &middot; Thiết kế mạch PCB &middot; Lập trình C</p>
+        <h1>Micro Mouse - Robot giải mã mê cung</h1>
+        <p class="dek">
+          Thiết kế và chế tạo một robot tự động có khả năng dò đường
+          và thoát khỏi mê cung bằng cách sử dụng cảm biến hồng ngoại,
+          vi điều khiển ATmega8 và thuật toán bám tường.
+        </p>
+        <p class="gl-facts">
+          Dự án yêu cầu tự thiết kế phần cứng từ đầu: vẽ sơ đồ nguyên lý và thiết kế
+          mạch in (PCB) trên phần mềm Fusion 360. Thay vì sử dụng các module ngoại vi
+          cắm sẵn, trực tiếp hàn các chip và linh kiện lên bo mạch nhằm tối ưu
+          hóa không gian và trọng lượng cho robot. Về mặt phần mềm, tôi đảm nhận
+          vai trò xử lý tín hiệu từ cụm cảm biến hồng ngoại, đồng thời tinh chỉnh
+          thuật toán bám tường phải để đảm bảo robot đưa ra
+          quyết định rẽ chính xác và di chuyển mượt mà trong không gian mê cung
+          chật hẹp.
+        </p>
+      </div>
+
+      <!-- ================= CỘT PHẢI: VIDEO VÀ ẢNH ================= -->
+      <div>
+        
+<!-- Video ở trên -->
+        <figure style="margin: 0 0 1.5rem 0;">
+          <video
+            controls
+            playsinline
+            preload="metadata"
+            width="100%"
+            style="border-radius: 8px; border: 1px solid var(--line); display: block;"
+            aria-label="Video animation thiết kế mạch PCB của robot Micro Mouse"
+          >
+            <source src="../assets/micromouse/animation.mp4" type="video/mp4" />
+            Trình duyệt của bạn không hỗ trợ phát video.
+          </video>
+          <figcaption style="text-align: center; font-size: 0.85em; margin-top: 10px; color: var(--muted); font-family: var(--font-mono);">
+            Video mô phỏng 3D: Thiết kế và bố trí linh kiện trên mạch PCB
+          </figcaption>
+        </figure>
+
+        <!-- 2 Ảnh PCB ở dưới -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+          <figure style="margin: 0;">
+            <img src="../assets/micromouse/pcb-top.jpg" alt="Mạch PCB mặt trên" style="width: 100%; height: auto; border-radius: 8px; border: 1px solid var(--line); display: block;">
+            <figcaption style="text-align: center; font-size: 0.8em; margin-top: 8px; color: var(--muted); font-family: var(--font-mono);">Mặt trên (Top Layer)</figcaption>
+          </figure>
+          
+          <figure style="margin: 0;">
+            <img src="../assets/micromouse/pcb-bottom.jpg" alt="Mạch PCB mặt dưới" style="width: 100%; height: auto; border-radius: 8px; border: 1px solid var(--line); display: block;">
+            <figcaption style="text-align: center; font-size: 0.8em; margin-top: 8px; color: var(--muted); font-family: var(--font-mono);">Mặt dưới (Bottom Layer)</figcaption>
+          </figure>
+        </div>
+
+      </div>
+      <!-- KẾT THÚC CỘT PHẢI -->
+
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap two-col">
+      <div>
+        <div class="section-head"><h2>Phần cứng</h2><span class="section-index">LINH KIỆN</span></div>
+        <table class="gl-table">
+          <thead><tr><th>Thành phần</th><th>Chức năng</th></tr></thead>
+          <tbody>
+            <tr><td>Vi điều khiển ATmega8</td><td>Xử lý trung tâm, lập trình bằng CodeVisionAVR</td></tr>
+            <tr><td>L9110S</td><td>Điều khiển động cơ DC</td></tr>
+            <tr><td>Cảm biến hồng ngoại</td><td>Phát hiện vật cản và đo khoảng cách</td></tr>
+            <tr><td>Mạch PCB</td><td>Thiết kế mạch trên Fusion360</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div>
+        <div class="section-head"><h2>Kết quả đạt được</h2><span class="section-index">ĐÁNH GIÁ</span></div>
+        <table class="gl-table">
+          <thead><tr><th>Hạng mục</th><th>Kết quả</th></tr></thead>
+          <tbody>
+            <tr><td>Thiết kế mạch</td><td>Hoạt động ổn định, không nhiễu tín hiệu chéo</td></tr>
+            <tr><td>Xử lý cảm biến</td><td>Phản hồi nhanh, lọc nhiễu ánh sáng môi trường tốt</td></tr>
+            <tr><td>Thuật toán</td><td>Chạy ổn định, bám tường mượt mà qua các góc cua 90 độ</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>&copy; 2026 Nguyễn Hoàng Linh</span>
+    <span><a href="../index.html#contact" style="text-decoration:none;">Liên hệ &rarr;</a></span>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

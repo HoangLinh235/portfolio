@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8" />
+<title>Hệ thống giám sát điện năng và cảnh báo an toàn — Nguyễn Hoàng Linh</title>
+<meta name="description" content="Dự án IoT giám sát điện năng và cảnh báo an toàn sử dụng ATmega328P, tích hợp đa cảm biến và gỡ lỗi phần mềm C/C++." />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="canonical" href="https://yourdomain.com/portfolio/projects/power-monitor.html" />
+<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+<meta name="theme-color" content="#f4f2ed" />
+<meta name="author" content="Nguyễn Hoàng Linh" />
+<meta property="og:title" content="Hệ thống giám sát điện năng và cảnh báo an toàn — Nguyễn Hoàng Linh" />
+<meta property="og:description" content="Dự án IoT giám sát điện năng và cảnh báo an toàn sử dụng ATmega328P, tích hợp đa cảm biến và gỡ lỗi phần mềm C/C++." />
+<meta property="og:type" content="website" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,300;6..72,400;6..72,500&family=Inter+Tight:wght@400;500;600&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+<a class="skip-link" href="#main">Chuyển đến nội dung</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="../index.html">
+      <strong>Nguyễn Hoàng Linh</strong>
+      <span>Kỹ thuật Điện tử - Tin học · ĐHQG Hà Nội</span>
+    </a>
+    <nav aria-label="Primary">
+      <ul class="nav-list" id="nav-list">
+        <li><a href="../index.html#experience">Kinh nghiệm</a></li>
+        <li><a href="../index.html#projects">Dự án</a></li>
+        <li><a href="../index.html#skills">Kỹ năng</a></li>
+        <li><a href="../about.html">Về tôi</a></li>
+        <li><a href="../index.html#contact">Liên hệ</a></li>
+        <li><a class="nav-cv" href="../assets/CV_Nguyen_Hoang_Linh.pdf">CV</a></li>
+      </ul>
+    </nav>
+    <button class="nav-toggle" aria-label="Mở menu điều hướng" aria-expanded="false" aria-controls="nav-list">
+      <span class="nav-toggle-bars"><span></span><span></span><span></span></span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+  <section class="page-hero">
+    <div class="wrap">
+      <a class="breadcrumb" href="../index.html#projects">&larr; Tất cả dự án</a>
+      <p class="label">Hệ thống Nhúng &middot; C/C++ &middot; Kiểm thử phần cứng</p>
+      <h1>Giám sát điện năng & cảnh báo an toàn</h1>
+      <p class="dek">Xây dựng trạm giám sát thông số môi trường và điện năng theo thời gian thực sử dụng ATmega328P, tập trung vào gỡ lỗi logic đa luồng và toàn vẹn tín hiệu phần cứng.</p>
+    </div>
+  </section>
+
+  <section class="section" style="border-top:none; padding-top:0;">
+    <div class="wrap two-col">
+      <div class="prose">
+        <p>Dự án này tập trung giải quyết bài toán xử lý tín hiệu đồng thời từ nhiều ngoại vi khác nhau trên một vi điều khiển đơn lõi (ATmega328P) mà không làm gián đoạn luồng thực thi cảnh báo an toàn của hệ thống.</p>
+        
+        <figure style="margin: 2rem 0;">
+          <img src="../assets/power.jpg" alt="Mô hình hệ thống" style="width: 100%; border-radius: 8px;">
+          <figcaption style="text-align: center; font-size: 0.85em; margin-top: 8px; color: #666; font-family: 'Inter Tight', sans-serif;">Sơ đồ kết nối của hệ thống</figcaption>
+        </figure>
+        
+        <p>Thay vì thiết kế hệ thống từ đầu, vai trò cốt lõi trong dự án là tham gia rà soát mã nguồn và gỡ lỗi logic điều khiển. Bằng cách áp dụng cơ chế hàm <code>millis()</code>, hệ thống loại bỏ được trạng thái chờ (blocking) gây ra bởi hàm <code>delay()</code> truyền thống, giúp vi điều khiển xử lý tín hiệu từ hệ thống cảm biến một cách mượt mà.</p>
+        <p>Quá trình tích hợp phần cứng đòi hỏi việc đấu nối và chạy thử nghiệm liên tục để đảm bảo độ tin cậy. Mục tiêu tối thượng là hệ thống ngắt relay bảo vệ phải phản hồi lập tức ngay khi các module phát hiện sự cố, đảm bảo an toàn tuyệt đối cho thiết bị điện.</p>
+      </div>
+
+      <div>
+        <table class="spec-table">
+          <tbody>
+            <tr><th>Nền tảng</th><td>Vi điều khiển ATmega328P</td></tr>
+            <tr><th>Ngôn ngữ</th><td>C/C++</td></tr>
+            <tr><th>Ngoại vi</th><td>PZEM, SHT3X, MQ2, RFID</td></tr>
+            <tr><th>Trọng tâm</th><td>Rà soát mã nguồn, kiểm thử phần cứng</td></tr>
+            <tr><th>Giao thức</th><td>UART, I2C, SPI</td></tr>
+            <tr><th>Kết quả</th><td>Hệ thống phản hồi ngắt relay theo thời gian thực không bị treo</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Chi tiết công việc</h2>
+        <span class="section-index">01 / THỰC THI</span>
+      </div>
+      <ol class="process-list">
+        <li><div><h4>Rà soát mã nguồn</h4><p>Phân tích mã nguồn C/C++ để tìm kiếm các điểm nghẽn logic có thể gây treo hệ thống khi hoạt động thời gian dài.</p></div></li>
+        <li><div><h4>Gỡ lỗi logic điều khiển</h4><p>Vận dụng cơ chế hàm millis() để thay thế các khoảng chờ đồng bộ, giúp vi điều khiển xử lý đa tác vụ trơn tru hơn.</p></div></li>
+        <li><div><h4>Đấu nối phần cứng</h4><p>Tham gia thiết lập để kết nối các cảm biến đo điện năng (PZEM), môi trường (SHT3X, MQ2) và bảo mật (RFID) qua các chuẩn UART, I2C, SPI.</p></div></li>
+        <li><div><h4>Chạy thử nghiệm</h4><p>Trực tiếp giám sát tín hiệu đầu vào và độ trễ của hệ thống ngắt relay, đảm bảo chức năng cảnh báo hoạt động chính xác khi có sự cố giả định.</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section" id="disclosure">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Kỹ năng đạt được</h2>
+        <span class="section-index">02 / KẾT QUẢ TỔNG QUAN</span>
+      </div>
+
+      <div class="disclosure">
+        <div class="disclosure-col">
+          <p class="label">Phần cứng & Giao tiếp</p>
+          <ul class="disclosure-list">
+            <li>Nắm vững phương pháp đấu nối linh kiện ngoại vi vào bo mạch chủ để tránh hiện tượng nhiễu tín hiệu.</li>
+            <li>Hiểu cơ chế thiết lập giao tiếp thông qua các chuẩn công nghiệp phổ biến (I2C, UART, SPI) tùy thuộc vào đặc tả của từng loại cảm biến.</li>
+          </ul>
+        </div>
+
+        <div class="disclosure-col disclosure-held">
+          <p class="label">Tư duy hệ thống</p>
+          <ul class="disclosure-list">
+            <li>Nâng cao kỹ năng đọc hiểu và sửa lỗi trên nền tảng mã nguồn có sẵn thay vì chỉ viết code mới.</li>
+            <li>Hình thành tư duy kiểm thử: luôn xác nhận độ tin cậy của dữ liệu phần cứng trước khi tích hợp vào luồng điều khiển phần mềm.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>&copy; <span data-year>2026</span> Nguyễn Hoàng Linh</span>
+    <span><a href="mailto:linhnguyennhl235@gmail.com" style="text-decoration:none;">Liên hệ &rarr;</a></span>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>
